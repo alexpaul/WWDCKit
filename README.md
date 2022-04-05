@@ -68,8 +68,24 @@ let package = Package(
 
 ## 3. Create a new `SwiftUI` View
 
-For the purposes of this demo we will create a SwiftUI view called `WWDCView`. This view will be able to be used by iOS clients of this Swift Package.
+For the purposes of this demo we will create a SwiftUI view called `WWDCView`. This view will be available via this Swift Package.
 
 1. Create a new SwiftUI view file called `WWDCView` inside the "Sources" folder. 
+
+```swift 
+import SwiftUI
+
+struct WWDCView: View {
+    var body: some View {
+        Text("WWDC 2022")
+    }
+}
+
+struct WWDCView_Previews: PreviewProvider {
+    static var previews: some View {
+        WWDCView()
+    }
+}
+```
 
 
