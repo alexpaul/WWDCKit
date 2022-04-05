@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "wwdckit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alexpaul/WWDCKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6604e046dccdd5e8ab78cf0f175437d4c8294987"
+      }
+    }
+  ],
+  "version" : 2
+}
