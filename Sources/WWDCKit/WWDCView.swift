@@ -19,7 +19,7 @@ struct WWDCView: View {
             }
             .padding()
             .background(Color.black)
-            Image(systemName: "photo")
+            Image(systemName: "chevron.left.forwardslash.chevron.right")
                 .font(.largeTitle)
             VStack(alignment: .center) {
                 Text("Call to code.")
