@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct WWDCView: View {
-    var body: some View {
+public struct WWDCView: View {
+    public init() {}
+
+    public var body: some View {
         ScrollView {
             HStack {
                 Text("WWDC22")
