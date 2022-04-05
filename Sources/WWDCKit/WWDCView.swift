@@ -14,6 +14,8 @@ struct WWDCView: View {
                 Text("WWDC22")
                     .font(.headline)
                 Spacer()
+                Text("Overview")
+                Text("Swift Student Challenge")
             }
             .padding()
             .background(Color.black)
