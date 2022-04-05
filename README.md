@@ -90,11 +90,15 @@ struct WWDCView_Previews: PreviewProvider {
 
 ## 4. Updated WWDCView 
 
+Pay close attention to the `public` access modifiers. Any part of your Package you need exposed to clients will be required to have the `public` access modifier applied to the type including the initializer here.
+
 ```swift
 import SwiftUI
 
-struct WWDCView: View {
-    var body: some View {
+public struct WWDCView: View {
+    public init() {}
+
+    public var body: some View {
         ScrollView {
             HStack {
                 Text("WWDC22")
@@ -105,7 +109,7 @@ struct WWDCView: View {
             }
             .padding()
             .background(Color.black)
-            Image("wwdc22")
+            Image(systemName: "chevron.left.forwardslash.chevron.right")
                 .font(.largeTitle)
             VStack(alignment: .center) {
                 Text("Call to code.")
