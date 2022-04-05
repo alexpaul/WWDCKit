@@ -70,6 +70,6 @@ let package = Package(
 
 For the purposes of this demo we will create a SwiftUI view called `WWDCView`. This view will be able to be used by iOS clients of this Swift Package.
 
-1. Create a new SwiftUI view file called `WWDCView`. 
+1. Create a new SwiftUI view file called `WWDCView` inside the "Sources" folder. 
 
 
