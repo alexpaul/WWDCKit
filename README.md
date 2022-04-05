@@ -148,4 +148,44 @@ extension View {
 }
 ```
 
+## 5. Publishing the Swift Package
+
+For now since we're testing out this package we won't add a `tag` to the commit which allows for versioning.
+
+## 6. Using this Swift Package
+
+1. Create a demo app iOS app called "WWDCPackageDemo" (ensure SwiftUI is the selected Interface). 
+2. Navigate to File >> Add Packages...
+3. Enter the following url `https://github.com/alexpaul/WWDCKit` in the Search field dialog.
+4. For "Dependency Rule" select "Branch" and `main` should be the default.
+5. Select "Add Package".
+6. The "WWDCKit" Package is now able to be used.
+
+## 7. Using the WWDCKit Package 
+
+1. Navigate to `ContentView.swift`.
+2. Add `import WWDCKit`.
+3. Modify the code so it looks similar to the following: 
+
+```swift
+import SwiftUI
+import WWDCKit
+
+struct ContentView: View {
+    var body: some View {
+        WWDCView()
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+![wwdcview](https://user-images.githubusercontent.com/1819208/161861450-f7e551a6-a0cd-4bd3-afcb-d1d91df19282.png)
+
+
+
 
