@@ -33,6 +33,8 @@ let package = Package(
 )
 ```
 
+***
+
 ## 2. Update the `Package.swift` as needed 
 
 1. Let's restrict this Package to iOS 15.
@@ -66,6 +68,8 @@ let package = Package(
 )
 ```
 
+***
+
 ## 3. Create a new `SwiftUI` View
 
 For the purposes of this demo we will create a SwiftUI view called `WWDCView`. This view will be available via this Swift Package.
@@ -87,6 +91,8 @@ struct WWDCView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
 
 ## 4. Updated WWDCView 
 
@@ -152,11 +158,54 @@ extension View {
 }
 ```
 
+***
+
 ## 5. Publishing the Swift Package
 
 For now since we're testing out this package we won't add a `tag` to the commit which allows for versioning.
 
-## 6. Using this Swift Package
+***
+
+## 6. Adding Resources e.g images to your Package 
+
+1. Add a "Resources" folder within your "PackageName" folder. e.g `WWDCKit/Resources`.
+2. Place any image assets inside the newly created "Resources" folder.
+3. Update the `Package.swift` file.
+```swift
+.target(
+    name: "WWDCKit",
+    dependencies: [],
+    resources: [.process("Resources")]),
+```
+4. Use the extension below to access the bundles resource.
+```swift
+extension Image {
+    init(packageResource name: String, ofType type: String) {
+        guard let path = Bundle.module.path(forResource: name, ofType: type),
+              let image = UIImage(contentsOfFile: path) else {
+            self.init(name)
+            return
+        }
+        self.init(uiImage: image)
+    }
+}
+```
+5. Usage:
+```swift
+Image(packageResource: "wwdc22", ofType: "png")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+```
+
+***
+
+#### Resource 
+
+* [Displaying Images in SwiftUI Views from Swift Package Resources](https://www.enekoalonso.com/articles/displaying-images-in-swiftui-views-from-swift-package-resources)
+
+***
+
+## 7. Using this Swift Package
 
 1. Create a demo app iOS app called "WWDCPackageDemo" (ensure SwiftUI is the selected Interface). 
 2. Navigate to File >> Add Packages...
@@ -165,7 +214,9 @@ For now since we're testing out this package we won't add a `tag` to the commit 
 5. Select "Add Package".
 6. The "WWDCKit" Package is now able to be used.
 
-## 7. Using the WWDCKit Package 
+***
+
+## 8. Using the WWDCKit Package 
 
 1. Navigate to `ContentView.swift`.
 2. Add `import WWDCKit`.
@@ -196,7 +247,11 @@ struct ContentView_Previews: PreviewProvider {
 
 ![Screen Shot 2022-04-06 at 5 44 31 AM](https://user-images.githubusercontent.com/1819208/161947508-e8d4972b-1732-478e-a529-6a2c48be09a8.png)
 
+***
 
+## Resources 
+
+* [Apple Docs: Creating a Standalone Swift Package with Xcode](https://developer.apple.com/documentation/xcode/creating_a_standalone_swift_package_with_xcode)
 
 
 
