@@ -188,7 +188,14 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
+#### Simulator 
+
 ![wwdcview](https://user-images.githubusercontent.com/1819208/161861450-f7e551a6-a0cd-4bd3-afcb-d1d91df19282.png)
+
+#### SwiftUI Preview
+
+![Screen Shot 2022-04-06 at 5 44 31 AM](https://user-images.githubusercontent.com/1819208/161947508-e8d4972b-1732-478e-a529-6a2c48be09a8.png)
+
 
 
 
