@@ -21,8 +21,9 @@ public struct WWDCView: View {
             }
             .padding()
             .background(Color.black)
-            Image(systemName: "chevron.left.forwardslash.chevron.right")
-                .font(.largeTitle)
+            Image(packageResource: "wwdc22", ofType: "png")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
             VStack(alignment: .center) {
                 Text("Call to code.")
                     .font(.largeTitle)
@@ -60,5 +61,16 @@ struct TextStyle: ViewModifier {
 extension View {
     func textStyle() -> some View {
         modifier(TextStyle())
+    }
+}
+
+extension Image {
+    init(packageResource name: String, ofType type: String) {
+        guard let path = Bundle.module.path(forResource: name, ofType: type),
+              let image = UIImage(contentsOfFile: path) else {
+            self.init(name)
+            return
+        }
+        self.init(uiImage: image)
     }
 }
