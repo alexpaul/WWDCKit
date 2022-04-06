@@ -241,7 +241,8 @@ struct ContentView_Previews: PreviewProvider {
 
 #### Simulator 
 
-![wwdcview](https://user-images.githubusercontent.com/1819208/161861450-f7e551a6-a0cd-4bd3-afcb-d1d91df19282.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2022-04-06 at 05 55 11](https://user-images.githubusercontent.com/1819208/161949464-e106cbce-e5cb-4839-ae36-5a006f2ea841.png)
+
 
 #### SwiftUI Preview
 
