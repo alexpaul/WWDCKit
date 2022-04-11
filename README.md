@@ -255,6 +255,7 @@ struct ContentView_Previews: PreviewProvider {
 * [Apple Docs: Creating a Standalone Swift Package with Xcode](https://developer.apple.com/documentation/xcode/creating_a_standalone_swift_package_with_xcode)
 * [Apple Docs: Building Swift Packages or Apps that Use Them in Continuous Integration Workflows](https://developer.apple.com/documentation/swift_packages/building_swift_packages_or_apps_that_use_them_in_continuous_integration_workflows)
   * > as per Apple documentation: commit your project’s Package.resolved file to your Git repository
+* [Apple Docs: Swift Packages Framework](https://developer.apple.com/documentation/swift_packages)
 
 
 
